@@ -1,9 +1,8 @@
 name: "Deployment to k8s-prod4"
 on:
-  push:
-    branches:
-      - '*'
-
+  workflow_dispatch:
+    branches: [ master ]
+    
 jobs:
   deploy:
     runs-on: ubuntu-latest
