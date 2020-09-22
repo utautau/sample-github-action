@@ -13,6 +13,10 @@ jobs:
         with:
           ref: master
 
-      - name: Configure AWS Credentials
-        run: echo ${PASSWORD}
+      - name: Cat Default
+        run: cat sample.txt
+      - name: Sed Password
+        run: sed sample.txt
+      - name: Cat Sedded
+        run: cat sample.txt
 
