@@ -16,7 +16,7 @@ jobs:
       - name: Cat Default
         run: cat sample.txt
       - name: Sed Password
-        run: sed sample.txt
+        run: sed s/{PASSWORD}/$PASSWORD/ sample.txt
       - name: Cat Sedded
         run: cat sample.txt
 
