@@ -5,7 +5,6 @@ export DOCKER_REPOSITORY=outautauo
 
 echo "DOCKER IMAGE=${DOCKER_IMAGE}"
 echo "IMAGE_VERSION=${IMAGE_VERSION}"
-echo "COMMIT HASH=${CIRCLE_SHA1}"
 
 # Build docker image.
 docker build -t ${DOCKER_IMAGE}:${IMAGE_VERSION} .
