@@ -1,5 +1,5 @@
 
-name: Sample workflow_dispatch
+name: Push Docker Hub
 on:
   workflow_dispatch:
 
