@@ -15,5 +15,5 @@ jobs:
           ref: master
 
       - name: Image Push
-        run: ./ushDockerHub.sh
+        run: ./pushDockerHub.sh
 
