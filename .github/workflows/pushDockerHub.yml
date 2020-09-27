@@ -1,0 +1,22 @@
+
+name: Sample workflow_dispatch
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      PASSWORD: ${{ secrets.PASSWORD }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Cat Default
+        run: cat sample.txt
+      - name: Sed Password
+        run: sed s/{PASSWORD}/$PASSWORD/ sample.txt
+      - name: Cat Sedded
+        run: cat sample.txt
