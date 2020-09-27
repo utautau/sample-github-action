@@ -14,9 +14,6 @@ jobs:
         with:
           ref: master
 
-      - name: Cat Default
-        run: cat sample.txt
-      - name: Sed Password
-        run: sed s/{PASSWORD}/$PASSWORD/ sample.txt
-      - name: Cat Sedded
-        run: cat sample.txt
+      - name: Image Push
+        run: ./ushDockerHub.sh
+
