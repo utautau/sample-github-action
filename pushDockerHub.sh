@@ -7,11 +7,7 @@ echo "DOCKER IMAGE=${DOCKER_IMAGE}"
 echo "IMAGE_VERSION=${IMAGE_VERSION}"
 echo "COMMIT HASH=${CIRCLE_SHA1}"
 
-# Create spring boot jar.
-./gradlew clean build -x test
-
 # Build docker image.
-cd `dirname ${0}`
 docker build -t ${DOCKER_IMAGE}:${IMAGE_VERSION} .
 docker tag ${DOCKER_IMAGE}:${IMAGE_VERSION} ${DOCKER_REPOSITORY}/${DOCKER_IMAGE}:${IMAGE_VERSION}
 
