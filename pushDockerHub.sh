@@ -7,6 +7,7 @@ echo "DOCKER IMAGE=${DOCKER_IMAGE}"
 echo "IMAGE_VERSION=${IMAGE_VERSION}"
 
 # Build docker image.
+cd test-sh
 docker build -t ${DOCKER_IMAGE}:${IMAGE_VERSION} .
 docker tag ${DOCKER_IMAGE}:${IMAGE_VERSION} ${DOCKER_REPOSITORY}/${DOCKER_IMAGE}:${IMAGE_VERSION}
 
