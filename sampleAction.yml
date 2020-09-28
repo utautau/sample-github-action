@@ -1,0 +1,23 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: echo
+  namespace: default
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: echo
+            image: outautauo/sample-action:1.0.1
+            env:
+              - name: TEST
+                valueFrom:
+                  configMapKeyRef:
+                    name: echo-config
+                    key: TEST
+            command: ["sh", "-c"]
+            args: ["/usr/local/test.sh"]
+          restartPolicy: Never
