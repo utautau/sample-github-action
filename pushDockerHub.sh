@@ -1,6 +1,6 @@
 #!/bin/sh
 export DOCKER_IMAGE=sample-action
-export IMAGE_VERSION=1.0.0
+export IMAGE_VERSION=1.0.1
 export DOCKER_REPOSITORY=outautauo
 
 echo "DOCKER IMAGE=${DOCKER_IMAGE}"
