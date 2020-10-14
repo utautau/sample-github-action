@@ -14,6 +14,6 @@ jobs:
           ref: master
 
       - name: Sed 
-        run: sed -i "s|${TEST}|$TEST|" test-sh/test.sh
+        run: sed -i s|"${TEST}"|$TEST| test-sh/test.sh
       - name: Show
         run: cat test-sh/test.sh
