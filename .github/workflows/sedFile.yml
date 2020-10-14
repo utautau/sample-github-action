@@ -15,7 +15,7 @@ jobs:
 
       - name: Sed 
         run: |
-          sed -i 's|${TEST}|$TEST|'test-sh/test.sh
+          sed -i 's|${TEST}|$TEST|' test-sh/test.sh
           cat test-sh/test.sh
       - name: Show
         run: cat test-sh/test.sh
