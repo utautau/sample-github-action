@@ -1,4 +1,4 @@
-name: "Deployment"
+name: "Sample"
 on:
   push:
     branches: [ master ]
