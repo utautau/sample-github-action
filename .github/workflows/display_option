@@ -1,0 +1,22 @@
+name: Deploy 
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: |
+          デプロイする環境を選択
+        required: true
+        type: choice
+        options:
+          - development
+          - staging
+          - production
+
+run-name: Deploy to ${{ inputs.environment }} by @${{ github.actor }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploying to ${{ inputs.environment }}"
